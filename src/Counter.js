@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Counter() {
+function Counter({ step }) {
   // Инициализируем состояние: начальное значение счётчика — 0
   const [count, setCount] = useState(0);
 
@@ -8,7 +8,7 @@ function Counter() {
     <div>
       <h2>Счётчик: {count}</h2>
       {/* Кнопка для увеличения счётчика */}
-      <button onClick={() => setCount(count + 1)}>Увеличить</button>
+      <button onClick={() => setCount(count + step)}>Увеличить на {step}</button>
     </div>
   );
 }
